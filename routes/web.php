@@ -27,3 +27,9 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 
     $router->get('dash', 'DashboardController@index');
 });
+
+Route::group(['prefix' => 'guestbook'], function ($router)
+{
+    $router->get('guestbook','GuestbookController@showView');
+    $router->post('submit','GuestbookController@submit');
+});

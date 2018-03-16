@@ -13,6 +13,7 @@ return [
     |
     */
 
+    //选择哪个guard做认证
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',

@@ -17,6 +17,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest:admin',['except' => 'logout']);
         $this->username = config('admin.global.username');
+
     }
 
     /**
@@ -30,6 +31,6 @@ class LoginController extends Controller
 
     public function guard()
     {
-        return auth()->guard('admin');
+            return auth()->guard('admin');
+        }
     }
-}

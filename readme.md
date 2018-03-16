@@ -43,3 +43,27 @@ location / {
 php artisan make:auth
 ```
 认证的路由也一并生成好了，查看路由文件routes/web.php，会发现该文件已经被更新
+> 生成数据库结构
+```
+php artisan migrate
+```
+
+*********************************************
+## 命令说明
+> 创建后台用户用户表及Model
+```
+php artisan make:model Models/Admin -m
+```
+> 给表填充数据
+```
+php artisan migrate --seed
+```
+> 创建控制器
+```
+php artisan make:controller Admin/LoginController 
+php artisan make:controller Admin/DashboardController
+```
+> 新建一个 Middleware
+```
+php artisan make:middleware AdminAuthMiddleware
+```
